@@ -7,10 +7,15 @@
             Shopify
         </title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Micro+5&family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
         <style>
             body{
                 margin:0;
                 padding:0;
+                font-family: "Open Sans", sans-serif;
             }
             #header{
                 text-align: center;
@@ -48,8 +53,45 @@
             img{
                 width:24%;
             }
+            #lower{
+                background-image: linear-gradient(
+                to bottom,rgb(255 255 0 / 50%),
+            rgb(0 0 255 / 50%)
+                ), url("https://media.istockphoto.com/id/1063727164/video/multicolored-motion-gradient-background-shades-of-gray.jpg?s=640x640&k=20&c=ddlttXzOZzR92NVlL40I6Bu31FCjReuNDKAvnIZ85D4=");
+            }
             #form{
-                
+                font-size: medium;
+                font-weight: 700;
+                width: 480px;
+                padding: 20px;
+                border:1px ridge;
+                margin: auto;
+                border-radius: 5px;
+                background-color: rgb(244,244,244);
+            }
+            label{
+                display: block;
+            }
+            #url,#password,#email,#message,#feedback,#age{
+                font-size: medium;
+                font-weight: 500px;
+                font-stretch: semi-condensed;
+                width: 100%;
+                height: 32px;
+                border: 1px ridge;
+                padding: 5px;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+            #submit{
+                display: block;
+                width: 90px;
+                height: 40px;
+                margin: auto;
+                color:white;
+                background-color: rgb(77,175,81);
+                border:1px ridge;
+                border-radius: 5px;
             }
         </style>
     </head>
@@ -88,6 +130,7 @@
             </div>
         </div>
     </div>
+    <div id="lower">
     <div id="form">
         <form action=""   method="get" class="form-example">
             <div class="form-element">
@@ -101,31 +144,41 @@
             <div class="form-element">
                 <label id="message">Message:</label>
                 <br/>
-                <textarea id="message" class="message" rows="5" cols="20" required></textarea>
+                <textarea id="message" class="message" style="height: 90px;" required></textarea>
             </div>
+            <br/>
             <div class="form-element">
                 <label id="rating">Website Rating:</label>
-                <input type="radio" id="Execellent" name="rate" value="Execellent"/><label for="Execellent">Execellent</label>
-                <input type="radio" id="Good" name="rate" value="Good"/><label for="Good">Good</label>
-                <input type="radio" id="Average" name="rate" value="Average"/><label for="Average">Average</label>
-                <input type="radio" id="Poor" name="rate" value="Poor"/><label for="Poor">Poor</label>
+                <br>
+                <input type="radio" id="Execellent" name="rate" value="Execellent"/><label for="Execellent" style="display: inline;">Execellent</label>
+                <input type="radio" id="Good" name="rate" value="Good"/><label for="Good" style="display: inline;">Good</label>
+                <input type="radio" id="Average" name="rate" value="Average"/><label for="Average" style="display: inline;">Average</label>
+                <input type="radio" id="Poor" name="rate" value="Poor"/><label for="Poor" style="display: inline;">Poor</label>
             </div>
+            <br/>
             <div class="form-element">
                 <label id="age">Age (10-100):</label>
                 <input type="number" id="age" class="age" min="10" max="100" required/>
             </div>
+            <br/>
             <div class="form-element">
                 <label id="age">Website URL:<sub>(optional)</sub></label>
                 <input type="url" id="url" class="url"/>
             </div>
+            <br/>
             <div class="form-element">
-                <input type="checkbox" id="terms" class="terms"/>
-                <label id="terms">I agree to the terms and conditions</label>
+                <input type="checkbox" id="terms" class="terms" required/>
+                <label id="terms" style="display: inline;" >I agree to the terms and conditions</label>
             </div>
+            <br>
             <div class="form-element">
                 <input type="submit" id="submit" value="Submit"/>
             </div>
         </form>
     </div>
+    </div>
+    <footer style="background-color: #020001;width: 100%; height: 50px;">
+
+    </footer>
     </body>
 </html>
